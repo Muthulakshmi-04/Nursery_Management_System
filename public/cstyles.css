@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('h13.jpg');
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: rgba(0, 128, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #fff;
+    padding: 10px 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align:left;
+    background-color: rgb(187, 216, 187);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.container h2 {
+    margin-top: 20px;
+}
+
+.container p, .container ul {
+    margin-bottom: 20px;
+}
+.content {
+    flex: 1;
+}
+
+.image-container {
+    margin-left: 20px; 
+    letter-spacing: 35px;/* Adjust the spacing between the content and image */
+}
+
+.container img {
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add border radius to the image */
+}

@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('blurred-spring-background-nature-with-blooming-glade-generative-ai-technology-free-photo.jpg');
+    background-repeat: no-repeat;
+    
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 255, 0, 0.2);
+    background-image: url('/LogInSignUpTutorial/img/josh-sorenson-FPVzkHF3wgM-unsplash.jpg');/* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(174, 171, 171, 0.1);
+    
+}
+
+
+.image-container {
+    padding: 20px;
+    letter-spacing: 70px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary {
+    background-color: #525655;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #676c6e;
+}
+.btn-danger {
+    background-color: #b1a8a9;
+    color: #fff;
+}
+.btn-danger:hover {
+    background-color: #bbafb0;
+}
+.btn-success {
+    background-color: #b4c0b6;
+    color: #fff;
+}
+.btn-success:hover {
+    background-color: #b0b9b2;
+}
+.btn-logout {
+    background-color: #a7afb5;
+    color: #fff;
+}
+.btn-logout:hover {
+    background-color: #b1b8bd;
+}
+.btn-display {
+    background-color: #bbb7ad;
+    color: #fff;
+}
+.btn-display:hover {
+    background-color: #bab6aa;
+}
