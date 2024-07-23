@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Plants</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+        background-image: url('blurred-spring-background-nature-with-blooming-glade-generative-ai-technology-free-photo.jpg');
+
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a1be86;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select.form-control {
+    height: auto;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5e6b79;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #8194a8;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Plant</h1>
+         <form action="/order" method="post">
+            <div class="form-group">
+                <label for="plantName">Select Plant:</label>
+                <select id="plantName" name="plantName" class="form-control">
+                    {{#each plants}}
+                        <option value="{{this.name}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+            <br></br>
+            <button class="btn btn-primary"  onclick="goToViewPage()">Back</button>
+     <script>
+
+    function goToViewPage() {
+        window.location.href = "/userview"; // Change 'insert.html' to the actual URL of your insert page
+    }
+    </script>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Catalog</h1>
+    <ul>
+        {{#each plants}}
+            <li>
+                <span>{{this.name}}</span>
+                <span>Price: ${{this.price}}</span>
+                <form action="/cart/add" method="post">
+                    <input type="hidden" name="plantName" value="{{this.name}}">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
+

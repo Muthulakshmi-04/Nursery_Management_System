@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items</title>
+    <style>
+        /* Define your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('blurred-spring-background-nature-with-blooming-glade-generative-ai-technology-free-photo.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+        button {
+    width: 10%;
+    padding: 10px 20px;
+    margin-right: 30px;
+    background-color: #717e8c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <h1>Plant List</h1>
+      <button class="btn btn-primary"  onclick="goToViewPage()">Back</button>
+     <script>
+
+    function goToViewPage() {
+        window.location.href = "/view"; // Change 'insert.html' to the actual URL of your insert page
+    }
+    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Botanical Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each items}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.Botanicalname}}</td>
+                <td>{{this.price}}</td>
+            </tr>
+            {{/each}}
+    
+        </tbody>
+    </table>
+
+</body>
+</html>

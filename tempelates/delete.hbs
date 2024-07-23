@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Plant</title>
+    <style>
+        {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    place-items: center;
+    background-image: url('blurred-spring-background-nature-with-blooming-glade-generative-ai-technology-free-photo.jpg');
+    background-repeat: no-repeat;
+}
+
+h1{
+    /* color: rgb(223, 155, 52); */
+    margin-top: 20vh;
+    margin-bottom: 30px;
+
+}
+input{
+    font-size: 1rem;
+    width: 500px;
+    padding: 6px 2px; 
+    margin: 10px 0 10px 0;
+}
+.sub{
+    background-color: grey;
+    cursor: pointer;
+}
+
+form{
+    /* margin-top: 20vh; */
+    text-align: center;
+    border: 5px solid grey;
+    padding: 20px;
+    background-color: rgb(166, 221, 179);
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary {
+    background-color: grey;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #676c6e;
+}
+.btn-danger {
+    background-color: #b1a8a9;
+    color: #fff;
+}
+.btn-danger:hover {
+    background-color: #bbafb0;
+}
+.btn-success {
+    background-color: #b4c0b6;
+    color: #fff;
+}
+.btn-success:hover {
+    background-color: #b0b9b2;
+}
+.btn-logout {
+    background-color: #a7afb5;
+    color: #fff;
+}
+.btn-logout:hover {
+    background-color: #b1b8bd;
+}
+.btn-display {
+    background-color: #bbb7ad;
+    color: #fff;
+}
+.btn-display:hover {
+    background-color: #bab6aa;
+}
+</style>
+</head>
+<body>
+    <h1>Delete Plant</h1>
+    <form id="deleteForm">
+        <label for="plantName">Plant Name:</label>
+        <input type="text" id="plantName" name="plantName" required>
+        <button class="btn btn-primary" type="submit">Delete Plant</button>
+        <br>
+        <button class="btn btn-primary"  onclick="goToViewPage()">Back</button>
+     <script>
+
+    function goToViewPage() {
+        window.location.href = "/view"; // Change 'insert.html' to the actual URL of your insert page
+    }
+</script>
+    </form>
+
+    <script>
+        document.getElementById('deleteForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const plantName = document.getElementById('plantName').value;
+
+            try {
+                const response = await fetch('/delete', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ plantName })
+                });
+
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error deleting plant');
+            }
+        });
+    </script>
+</body>
+</html>
